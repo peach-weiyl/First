@@ -16,7 +16,7 @@ def login():
     error=None
     if request.method=='POST':
         if request.form['username']!='admin' or request.form['password']!='admin':
-            error='账号或密码不正确，请重新输入。'
+            error='Incorrect account or password, please try again'
         else:
             return redirect(url_for('home'))
     return render_template('login.html',error=error)
